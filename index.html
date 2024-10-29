@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+<meta name="robots" content="noindex, nofollow" />
+
+    <title>Te Dua Inush</title>
+    <style>
+        #floatingButton {
+		
+            opacity:0.7;
+            position: fixed;
+            top: 1em;
+            left: 1em;
+            padding: 10px 20px;
+            background-color: rgba(255,0,0,0.1);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+	   
+	    
+        }
+    </style>
+	
+<style>
+body {
+  text-align: center;
+  min-height: 100vh;
+  background: black;
+  color: whitesmoke;
+  display: flex;
+  overflow: hidden;
+}
+h1 {
+  margin: auto;
+  font-family: Gorditas;
+  font-size: 6rem;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  pointer-events: none;
+}
+.td-wrapper,
+canvas {
+  transition: opacity 1s;
+}
+.td-wrapper:not(.td-hide) + canvas,
+.td-hide {
+  opacity: 0;
+}
+
+.fire {
+ color: #f5f5f5; /* Light text color */
+ text-align:center; /* Center alignment of text */
+ font-family: 'Courier New', Courier, monospace; /* Monospace font for sharp edges */
+ font-size: 80px; /* Text size */
+ /* Multi-layered text-shadow for fire effect */
+ text-shadow:
+ 0px -1px 3px #fff, /* Innermost layer - intense heat (white) */
+ 0px -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+ 0px -6px 12px #F90, /* Middle layer - body of flame (orange) */
+ 0px -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+}
+
+/* Define the animation named "flicker" */
+@keyframes flicker {
+    /* Initial state of animation */
+    0%, 
+    /* Final state of animation */
+    100% { 
+        text-shadow: 
+            0 -1px 3px #fff, /* Innermost layer - intense heat (white) */
+            0 -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+            0 -6px 12px #F90, /* Middle layer - body of flame (orange) */
+            0 -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+    }
+    /* Middle state of animation */
+    50% { 
+        text-shadow: 
+            0 -2px 6px #fff, /* Innermost layer - intense heat (white) */
+            0 -4px 12px #FF3, /* Second layer - core of flame (yellow) */
+            0 -8px 16px #F90, /* Middle layer - body of flame (orange) */
+            0 -12px 24px #C33; /* Outermost layer - edges of flame (red) */
+    }
+}
+
+.fire {
+    /* Apply the "flicker" animation to the .fire class */
+    animation: flicker 2s infinite;
+}
+
+.fire{
+font-size:0.9rem;
+}
+#fireover{
+color:#FFD700;
+opacity:0.4;
+font-weight:normal;
+font-style:italic;
+font-family:verdana;
+z-index:1000;
+text-shadow: 11px 1px 7px rgba(255, 215, 0, 0.75),
+             9px 11px 14px rgba(21, 11, 5, 0.91),
+             13px 1px 16px rgba(0, 0, 0, 0.71),
+             9px -10px 15px rgba(122, 17, 13, 1);
+}
+
+.PULSE {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: PULSE 1s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: PULSE 1s infinite;
+  
+  /* Standard Syntax */
+  animation: PULSE 1.25s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes PULSE{
+   0%{color: rgb(240, 0, 0,0.7);}	
+   10%{color:rgba(250,0,0,0.8);}
+   25%{color:rgba(255,0,0,0.9);}
+   45%{color:rgba(250,0,0,0.8);}
+   65%{color:rgba(255,0,0,0.9);}
+   110%{color:rgba(255,0,0,0.9);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes PULSE{
+   0%{color: rgb(240, 0, 0,0.7);}	
+   10%{color:rgba(250,0,0,0.8);}
+   25%{color:rgba(255,0,0,0.9);}
+   45%{color:rgba(250,0,0,0.8);}
+   65%{color:rgba(255,0,0,0.9);}
+   110%{color:rgba(255,0,0,0.9);}
+}
+
+/* Standard Syntax */
+@keyframes PULSE{
+    0%{color: rgb(240, 0, 0,0.7);}	
+   10%{color:rgba(250,0,0,0.8);}
+   25%{color:rgba(255,0,0,0.9);}
+   45%{color:rgba(250,0,0,0.8);}
+   65%{color:rgba(255,0,0,0.9);}
+   110%{color:rgba(255,0,0,0.9);}
+}
+
+
+</style>
+</head>
+<body>
+<h1 style="z-index:-1001;text-shadow: 1px -1px 4px rgba(255, 255, 255, 0.88),
+             8px 5px 6px rgba(136, 132, 4, 0.96),
+             4px -6px 10px rgba(144, 0, 0, 0.91),
+             12px -19px 10px rgba(0, 0, 113, 1),
+             16px -5px 11px rgba(233, 96, 46, 0.87);">
+  <span>TE DUA</span> <span style="color:rgba(230,0,0,0.9)" class="PULSE">&hearts;</span><span style="color:rgba(230,0,0,0.9)" class="PULSE">DORINA</span><span style="color:rgba(230,0,0,0.9)" class="PULSE">&hearts;</span>
+  <span></span>
+  <span class="fire" id="fireover"><br>Ndepermjet syve te tu shoh parajsen, ne zemren tende jam ne shtepi, dore per dore me ty e dua te ardhmen, te plote me ben vec &hearts;TI&hearts;.</span>
+</h1>
+
+
+
+	
+	
+<div class="stars" style="z-index:-1002"></div>
+<div class="twinkling" style="z-index:-1005"></div>
+<div class="clouds" style="z-index:-1000;opacity:0.8;"></div>
+<style>
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color:rgba(33, 33, 33, 0.9);
+    color:#ffffff;
+    display:block;
+    font: 14px/1.3 Arial,sans-serif;
+    height:50px;
+    position:relative;
+    z-index:5;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+header h2{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+header a, a:visited {
+    text-decoration:none;
+    color:#fcfcfc;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+</style>	
+
+
+
+	
+
+<button style='font-size:1.1em;' id="floatingButton" onclick="playMusic()"><i><b>&#127925;</b></i></button>
+    <audio id="myAudio" src="sound3.webm" loop></audio>
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+			document.getElementById("floatingButton").innerHTML="";
+			document.getElementById("floatingButton").style.backgroundColor="#000";
+			document.getElementById("floatingButton").style.opacity="0.4";
+        }
+    </script>
+	<p style="color:#f00;position:fixed;margin:0 auto;margin-bottom:0;bottom:0;width:100%;background:rgba(255,0,0,0)">&copy;2024 K&hearts;D. Te gjitha te drejtat e rezervuara.</p>
+</body>
+</html>
