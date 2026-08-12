@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+<meta name="robots" content="noindex, nofollow" />
+
+
+    <title>Dashuria Ime Dorina</title>
+ <style>
+    #floatingButton1 {
+	
+        opacity:0.7;
+        width:100%;
+        position: fixed;
+        margin:0 auto;
+        padding: 10px 20px;
+        background-color: rgba(255,0,0,0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        /* Glow ONLY around the musical note */
+        text-shadow:
+            0 0 3px #ffffff,
+            0 0 7px #fff59d,
+            0 0 14px #ffd54f,
+            0 0 22px #ff9800;
+
+        animation: noteSun 2s ease-in-out infinite;
+    }
+
+    @keyframes noteSun {
+        0%, 100% {
+            text-shadow:
+                0 0 3px #ffffff,
+                0 0 7px #fff59d,
+                0 0 14px #ffd54f,
+                0 0 22px #ff9800;
+        }
+
+        50% {
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 11px #fffde7,
+                0 0 20px #ffd54f,
+                0 0 32px #ff9800,
+                0 0 45px #ffb300;
+        }
+    }
+
+#floatingButton2 {
+	
+        opacity:0.7;
+        width:100%;
+        position: fixed;
+        margin:auto;
+        padding: 10px 20px;
+        background-color: rgba(255,0,0,0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        /* Glow ONLY around the musical note */
+        text-shadow:
+            0 0 3px #ffffff,
+            0 0 7px #fff59d,
+            0 0 14px #ffd54f,
+            0 0 22px #ff9800;
+
+        animation: noteSun 2s ease-in-out infinite;
+    }
+
+    @keyframes noteSun {
+        0%, 100% {
+            text-shadow:
+                0 0 3px #ffffff,
+                0 0 7px #fff59d,
+                0 0 14px #ffd54f,
+                0 0 22px #ff9800;
+        }
+
+        50% {
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 11px #fffde7,
+                0 0 20px #ffd54f,
+                0 0 32px #ff9800,
+                0 0 45px #ffb300;
+        }
+    }
+
+    #floatingButton1:hover, #floatingButton2:hover {
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 12px #fffde7,
+            0 0 22px #ffd54f,
+            0 0 35px #ff9800,
+            0 0 50px #ffb300;
+    }
+</style>
+	
+<style>
+body {
+  text-align: center;
+  min-height: 100vh;
+  background: black;
+  color: whitesmoke;
+  display: flex;
+  overflow: hidden;
+}
+h1 {
+  margin: auto;
+  font-family: Gorditas;
+  font-size: 6rem;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  pointer-events: none;
+}
+.td-wrapper,
+canvas {
+  transition: opacity 1s;
+}
+.td-wrapper:not(.td-hide) + canvas,
+.td-hide {
+  opacity: 0;
+}
+
+.fire {
+ color: #f5f5f5; /* Light text color */
+ text-align:center; /* Center alignment of text */
+ font-family: 'Courier New', Courier, monospace; /* Monospace font for sharp edges */
+ font-size: 80px; /* Text size */
+ /* Multi-layered text-shadow for fire effect */
+ text-shadow:
+ 0px -1px 3px #fff, /* Innermost layer - intense heat (white) */
+ 0px -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+ 0px -6px 12px #F90, /* Middle layer - body of flame (orange) */
+ 0px -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+}
+
+/* Define the animation named "flicker" */
+@keyframes flicker {
+    /* Initial state of animation */
+    0%, 
+    /* Final state of animation */
+    100% { 
+        text-shadow: 
+            0 -1px 3px #fff, /* Innermost layer - intense heat (white) */
+            0 -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+            0 -6px 12px #F90, /* Middle layer - body of flame (orange) */
+            0 -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+    }
+    /* Middle state of animation */
+    50% { 
+        text-shadow: 
+            0 -2px 6px #fff, /* Innermost layer - intense heat (white) */
+            0 -4px 12px #FF3, /* Second layer - core of flame (yellow) */
+            0 -8px 16px #F90, /* Middle layer - body of flame (orange) */
+            0 -12px 24px #C33; /* Outermost layer - edges of flame (red) */
+    }
+}
+
+.fire {
+    /* Apply the "flicker" animation to the .fire class */
+    animation: flicker 2s infinite;
+}
+
+.fire{
+font-size:1.3rem;
+}
+#fireover{
+color:#FFD700;
+opacity:0.9;
+font-weight:normal;
+font-style:italic;
+font-family:verdana;
+z-index:1000;
+text-shadow: 11px 1px 7px rgba(255, 215, 0, 0.75),
+             9px 11px 14px rgba(21, 11, 5, 0.91),
+             13px 1px 16px rgba(0, 0, 0, 0.71),
+             9px -10px 15px rgba(122, 17, 13, 1);
+}
+
+.PULSE {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: PULSE 1s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: PULSE 1s infinite;
+  
+  /* Standard Syntax */
+  animation: PULSE 1.25s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes PULSE{
+   0%{color: rgb(240, 0, 0,0.7);}	
+   10%{color:rgba(250,0,0,0.8);}
+   25%{color:rgba(255,0,0,0.9);}
+   45%{color:rgba(250,0,0,0.8);}
+   65%{color:rgba(255,0,0,0.9);}
+   110%{color:rgba(255,0,0,0.9);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes PULSE{
+   0%{color: rgb(240, 0, 0,0.7);}	
+   10%{color:rgba(250,0,0,0.8);}
+   25%{color:rgba(255,0,0,0.9);}
+   45%{color:rgba(250,0,0,0.8);}
+   65%{color:rgba(255,0,0,0.9);}
+   110%{color:rgba(255,0,0,0.9);}
+}
+
+/* Standard Syntax */
+@keyframes PULSE{
+    0%{color: rgb(240, 0, 0,0.7);}	
+   10%{color:rgba(250,0,0,0.8);}
+   25%{color:rgba(255,0,0,0.9);}
+   45%{color:rgba(250,0,0,0.8);}
+   65%{color:rgba(255,0,0,0.9);}
+   110%{color:rgba(255,0,0,0.9);}
+}
+
+
+</style>
+</head>
+<body>
+	<!--not my code-->
+	  <canvas id="pinkboard"></canvas>
+	<!--not my code-->
+	<!--not my code-->
+	 
+	<!--not my code-->
+<h1 style="z-index:100;text-shadow: 1px -1px 4px rgba(255, 255, 255, 0.88),
+             8px 5px 6px rgba(136, 132, 4, 0.96),
+             4px -6px 10px rgba(144, 0, 0, 0.91),
+             12px -19px 10px rgba(0, 0, 113, 1),
+             16px -5px 11px rgba(233, 96, 46, 0.87);">
+  <span id="englishToAlb1" style="font-size:1.6em;">TE DUA</span><br> <span style="color:rgba(230,0,0,0.9);" class="PULSE">&#10084<span style="text-decoration:underline solid">DORINA</span>&#10084</span>
+  <span class="fire" id="fireover"><div id="englishToAlb2"><br><br>&hearts;Buzeqeshja jote eshte lumturia ime. <br>Zeri yt eshte melodia e shpirtit tim.  &hearts;</div></span>
+  <br>
+</h1>
+<!--not my code-->
+	
+<!--not my code-->
+
+	
+	
+<div class="stars" ></div>
+<div class="twinkling" ></div>
+<div class="clouds" ></div>
+<div class="comet">&infin;  D&#10084;K &infin; </div>
+<style>
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color:rgba(33, 33, 33, 0.9);
+    color:#ffffff;
+    display:block;
+    font: 14px/1.3 Arial,sans-serif;
+    height:50px;
+    position:relative;
+    z-index:5;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+header h2{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+header a, a:visited {
+    text-decoration:none;
+    color:#fcfcfc;
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1;
+  background-image: 
+    radial-gradient(2px 2px at 10% 20%, white, transparent),
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 90% 60%, white, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: starTwinkle 1.5s ease-in-out infinite;
+pointer-events: none;
+}
+
+.twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+
+
+@keyframes starTwinkle {
+  0% {
+    opacity: 0.6;      /* Slightly bright */
+  }
+  50% {
+    opacity: 1;        /* Full bright */
+  }
+  100% {
+    opacity: 0.6;      /* Slightly bright */
+  }
+}
+
+/* ============================================
+   COMET: Single comet flying through space
+   ============================================ */
+.comet {
+  position: fixed;
+  width: 70px;
+  height: 20px;
+  top: 10%;
+  left: -300px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100"><defs><radialGradient id="cometGlow"><stop offset="0%" style="stop-color:white;stop-opacity:1" /><stop offset="50%" style="stop-color:%23ffff99;stop-opacity:0.8" /><stop offset="100%" style="stop-color:%23ffff00;stop-opacity:0" /></radialGradient><filter id="cometBlur"><feGaussianBlur in="SourceGraphic" stdDeviation="2"/></filter></defs><g filter="url(%23cometBlur)"><circle cx="280" cy="50" r="15" fill="url(%23cometGlow)" opacity="1"/><ellipse cx="150" cy="50" rx="150" ry="25" fill="white" opacity="0.3"/><ellipse cx="100" cy="50" rx="100" ry="20" fill="yellow" opacity="0.2"/><ellipse cx="50" cy="50" rx="50" ry="15" fill="yellow" opacity="0.1"/></g></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 4;
+  opacity: 0.6;
+  pointer-events: none;
+  animation: cometFly 20s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 100, 0.8))
+          drop-shadow(0 0 20px rgba(255, 200, 0, 0.4));
+}
+
+/* ============================================
+   KEYFRAMES: How comet flies through space
+   ============================================ */
+@keyframes cometFly {
+  0% {
+    left: -300px;
+    top: 5%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  50% {
+    left: 50%;
+    top: 30%;
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    left: calc(100% + 300px);
+    top: 70%;
+    opacity: 0;
+  }
+}
+</style>	
+
+
+
+	
+
+<button onclick="playMusic1()" style='z-index:4002;font-size:1.8rem;color:#f00;' id="floatingButton1">&#127925;</button><button onclick="playMusic2()" style='z-index:4001;font-size:1.8rem;color:#f00;' id="floatingButton2">&#127925;</button>
+    <audio id="myAudio1" src="audio1.webm" loop></audio><audio id="myAudio2" src="audio2.webm" loop></audio>
+    <script>
+        function playMusic1() {
+            var audio = document.getElementById("myAudio1");
+            audio.play();
+			document.getElementById("floatingButton1").innerHTML="";
+			document.getElementById("floatingButton1").style.backgroundColor="#000";
+			document.getElementById("floatingButton1").style.opacity="0";
+        }
+        function playMusic2() {
+            var audio = document.getElementById("myAudio2");
+			var oldaudio=document.getElementById("myAudio1");
+			oldaudio.pause();
+            audio.play();
+			document.getElementById("floatingButton2").innerHTML="";
+			document.getElementById("floatingButton2").style.backgroundColor="#000";
+			document.getElementById("floatingButton2").style.opacity="0";
+			
+			document.getElementById("englishToAlb1").innerHTML="I LOVE YOU";
+			document.getElementById("englishToAlb2").innerHTML="<br><br>&hearts;Your smile is my happiness. <br>Your voice is the melody of my soul.  &hearts;";
+        }
+    </script>
+	<p style="z-index:4001; font-size:1.5rem;color:#f00;position:fixed;margin:0 auto;margin-bottom:0;bottom:0;width:100%;background:rgba(255,0,0,0)">&infin;  D&nbsp;&#10084;&nbsp;K &infin; </p>
+		<!-- not my code-->
+	<style type="text/css">
+      html,
+      body {
+margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+        .pacifico-regular {
+          font-family: "Pacifico", serif;
+          font-weight: 400;
+          font-style: normal;
+          font-family: "Pacifico", serif;
+        }
+      }
+
+      canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+	z-index:10;
+	pointer-events:none;
+      }
+
+      .namebox {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .namebox h1 {
+        margin: 0 auto;
+        font-family: "Pacifico", serif;
+        font-size: 30px;
+      }
+      .message {
+        font-family: "Archivo", sans-serif; /* or 'Inter'/'Poppins' if you prefer */
+        font-size: 20px;
+        color: #fefefef4;
+        margin-top: 10px;
+        opacity: 0;
+        animation: fadeIn 2.5s ease-in-out 1.5s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .copy {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Arial", sans-serif;
+        font-size: 22px;
+        color: #ff16c2;
+        text-align: center;
+      }
+
+      .copy a {
+        color: #6666669c;
+      }
+    </style>
+	    <script>
+      var settings = {
+        particles: {
+          length: 500, // maximum amount of particles
+          duration: 2, // particle duration in sec
+          velocity: 100, // particle velocity in pixels/sec
+          effect: -0.75, // play with this for a nice effect
+          size: 30, // particle size in pixels
+        },
+      };
+      (function () {
+        var b = 0;
+        var c = ["ms", "moz", "webkit", "o"];
+        for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) {
+          window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"];
+          window.cancelAnimationFrame =
+            window[c[a] + "CancelAnimationFrame"] ||
+            window[c[a] + "CancelRequestAnimationFrame"];
+        }
+        if (!window.requestAnimationFrame) {
+          window.requestAnimationFrame = function (h, e) {
+            var d = new Date().getTime();
+            var f = Math.max(0, 16 - (d - b));
+            var g = window.setTimeout(function () {
+              h(d + f);
+            }, f);
+            b = d + f;
+            return g;
+          };
+        }
+        if (!window.cancelAnimationFrame) {
+          window.cancelAnimationFrame = function (d) {
+            clearTimeout(d);
+          };
+        }
+      })();
+      var Point = (function () {
+        function Point(x, y) {
+          this.x = typeof x !== "undefined" ? x : 0;
+          this.y = typeof y !== "undefined" ? y : 0;
+        }
+        Point.prototype.clone = function () {
+          return new Point(this.x, this.y);
+        };
+        Point.prototype.length = function (length) {
+          if (typeof length == "undefined")
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+          this.normalize();
+          this.x *= length;
+          this.y *= length;
+          return this;
+        };
+
+        Point.prototype.normalize = function () {
+          var length = this.length();
+          this.x /= length;
+          this.y /= length;
+          return this;
+        };
+        return Point;
+      })();
+
+      var Particle = (function () {
+        function Particle() {
+          this.position = new Point();
+          this.velocity = new Point();
+          this.acceleration = new Point();
+          this.age = 0;
+        }
+        Particle.prototype.initialize = function (x, y, dx, dy) {
+          this.position.x = x;
+          this.position.y = y;
+          this.velocity.x = dx;
+          this.velocity.y = dy;
+          this.acceleration.x = dx * settings.particles.effect;
+          this.acceleration.y = dy * settings.particles.effect;
+          this.age = 0;
+        };
+        Particle.prototype.update = function (deltaTime) {
+          this.position.x += this.velocity.x * deltaTime;
+          this.position.y += this.velocity.y * deltaTime;
+          this.velocity.x += this.acceleration.x * deltaTime;
+          this.velocity.y += this.acceleration.y * deltaTime;
+          this.age += deltaTime;
+        };
+
+        Particle.prototype.draw = function (context, image) {
+          function ease(t) {
+            return --t * t * t + 1;
+          }
+          var size = image.width * ease(this.age / settings.particles.duration);
+          context.globalAlpha = 1 - this.age / settings.particles.duration;
+          context.drawImage(
+            image,
+            this.position.x - size / 2,
+            this.position.y - size / 2,
+            size,
+            size
+          );
+        };
+        return Particle;
+      })();
+      /*
+  
+    * ParticlePool class
+  
+    */
+      var ParticlePool = (function () {
+        var particles,
+          firstActive = 0,
+          firstFree = 0,
+          duration = settings.particles.duration;
+        function ParticlePool(length) {
+          // create and populate particle pool
+          particles = new Array(length);
+          for (var i = 0; i < particles.length; i++)
+            particles[i] = new Particle();
+        }
+        ParticlePool.prototype.add = function (x, y, dx, dy) {
+          particles[firstFree].initialize(x, y, dx, dy);
+          // handle circular queue
+          firstFree++;
+          if (firstFree == particles.length) firstFree = 0;
+          if (firstActive == firstFree) firstActive++;
+          if (firstActive == particles.length) firstActive = 0;
+        };
+        ParticlePool.prototype.update = function (deltaTime) {
+          var i;
+          // update active particles
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].update(deltaTime);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].update(deltaTime);
+            for (i = 0; i < firstFree; i++) particles[i].update(deltaTime);
+          }
+          // remove inactive particles
+          while (
+            particles[firstActive].age >= duration &&
+            firstActive != firstFree
+          ) {
+            firstActive++;
+            if (firstActive == particles.length) firstActive = 0;
+          }
+        };
+        ParticlePool.prototype.draw = function (context, image) {
+          // draw active particles
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].draw(context, image);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].draw(context, image);
+            for (i = 0; i < firstFree; i++) particles[i].draw(context, image);
+          }
+        };
+        return ParticlePool;
+      })();
+      /*
+  
+    * Putting it all together
+  
+    */
+      (function (canvas) {
+        var context = canvas.getContext("2d"),
+          particles = new ParticlePool(settings.particles.length),
+          particleRate =
+            settings.particles.length / settings.particles.duration, // particles/sec
+          time;
+        // get point on heart with -PI <= t <= PI
+        function pointOnHeart(t) {
+          return new Point(
+            160 * 2.5 * Math.pow(Math.sin(t), 3),
+            130 * 2.5 * Math.cos(t) -
+              50 * 2.5 * Math.cos(2 * t) -
+              20 * 2.5 * Math.cos(3 * t) -
+              10 * 2.5 * Math.cos(4 * t) +
+              25 * 2.5
+          );
+        }
+
+        // creating the particle image using a dummy canvas
+
+        var image = (function () {
+          var canvas = document.createElement("canvas"),
+            context = canvas.getContext("2d");
+          canvas.width = settings.particles.size;
+          canvas.height = settings.particles.size;
+          // helper function to create the path
+          function to(t) {
+            var point = pointOnHeart(t);
+            point.x =
+              settings.particles.size / 2 +
+              (point.x * settings.particles.size) / 875;
+            point.y =
+              settings.particles.size / 2 -
+              (point.y * settings.particles.size) / 875;
+            return point;
+          }
+          // create the path
+          context.beginPath();
+          var t = -Math.PI;
+          var point = to(t);
+          context.moveTo(point.x, point.y);
+          while (t < Math.PI) {
+            t += 0.01; // baby steps!
+            point = to(t);
+            context.lineTo(point.x, point.y);
+          }
+          context.closePath();
+          // create the fill
+          context.fillStyle = "#ff30c5";
+          // context.fillStyle = '#ea80b0';
+          context.fill();
+          // create the image
+          var image = new Image();
+          image.src = canvas.toDataURL();
+          return image;
+        })();
+        // render that thing!
+        function render() {
+          // next animation frame
+          requestAnimationFrame(render);
+          // update time
+          var newTime = new Date().getTime() / 1000,
+            deltaTime = newTime - (time || newTime);
+          time = newTime;
+          // clear canvas
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          // create new particles
+          var amount = particleRate * deltaTime;
+          for (var i = 0; i < amount; i++) {
+            var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+            var dir = pos.clone().length(settings.particles.velocity);
+            particles.add(
+              canvas.width / 2 + pos.x,
+              canvas.height / 2 - pos.y,
+              dir.x,
+              -dir.y
+            );
+          }
+          // update and draw particles
+          particles.update(deltaTime);
+          particles.draw(context, image);
+        }
+        // handle (re-)sizing of the canvas
+        function onResize() {
+          canvas.width = canvas.clientWidth;
+          canvas.height = canvas.clientHeight;
+        }
+        window.onresize = onResize;
+        // delay rendering bootstrap
+        setTimeout(function () {
+          onResize();
+          render();
+        }, 10);
+      })(document.getElementById("pinkboard"));
+    </script>
+	<!--not my code-->
+</body>
+</html>
